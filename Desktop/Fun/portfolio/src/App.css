@@ -1,5 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+/* App.js CSS Starts */
+
 .app-container {
     box-sizing: border-box;
+    background-image: url("https://images.unsplash.com/photo-1501696045407-7613cdd8f968?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .app-container nav {
@@ -9,39 +21,83 @@
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    border-bottom: 2px salmon solid;
+    border-bottom: .4rem #AA2320 solid;;
 }
 
 .app-container nav h1 {
-    font-size: 65px;
-    color: lightslategrey;
-    text-shadow: 1px 1px 2px ghostwhite,
-                         -1px -1px 2px ghostwhite,
-                         1px -1px 2px ghostwhite,
-                         -1px 1px 2px ghostwhite;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 5.5rem;
+    letter-spacing: 3rem;
+    color: #AA2320;
+    text-shadow: .1rem .1rem .2rem whitesmoke,
+                         .1rem .1rem .2rem whitesmoke,
+                         .1rem -.1rem .2rem whitesmoke,
+                         -.1rem .1rem .2rem whitesmoke;
 }
 
 .nav-link {
-    padding: 12px 28px;
-    margin: 0 12px;
-    border: 1px salmon solid;
-    border-radius: 12px;
+    padding: 1.2rem 2.8rem;
+    margin: 0 1.2rem;
+    border: .2rem #AA2320 solid;
+    border-radius: 1.2rem;
     text-decoration: none;
-    color:ghostwhite ;
+    color:#AA2320 ;
+    font-size: 2.0rem;
+    font-weight:bold;
+    text-shadow: .2rem .2rem .3rem whitesmoke,
+    -.2rem -.2rem .3rem whitesmoke,
+    .2rem -.2rem .3rem whitesmoke,
+    -.2rem .2rem .3rem whitesmoke;
 }
 
 .active {
-    border: 1px ghostwhite solid;
-    color:salmon;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    box-shadow: 2px 2px 6px ghostwhite;
+    border: .2rem whitesmoke solid;
+    color: whitesmoke;
+    box-shadow: .2rem .2rem .3rem whitesmoke;
+    text-shadow: .2rem .2rem .3rem #AA2320,
+    -.2rem -.2rem .3rem #AA2320,
+    .2rem -.2rem .3rem #AA2320,
+    -.2rem .2rem .3rem #AA2320;
+}
+/* App.js CSS ends */
+
+/* Main.js CSS Starts */
+.main-container {
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1501696045407-7613cdd8f968?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
+.quote {
+    font-family: 'Rock Salt', cursive;
+    padding-top: 12.5rem;
+    text-align: center;
+    font-style: italic;
+    color: black;
+    text-shadow: .2rem .2rem .6rem black,
+    -.2rem -.2rem .6rem black,
+    .2rem -.2rem .6rem black,
+    -.2rem .2rem .6rem black;
+    opacity: 0.6;
+    letter-spacing: 2.4rem;
+    word-spacing: 2.4rem;
+    line-height: 2.0;
+    width: 95%;
+    margin: 0 auto;
+    font-size: 7.5rem;
+    transform: rotate(-12deg);
+}
 
-/* @media only screen and (max-width: 600px) {...} */
+.cut-time {
+    font-size: 3.5rem;
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+/* Main.js CSS Ends */
 
+/* Media Queries Start*/
 @media only screen and (max-width: 1100px) {
     .app-container nav {
         height: 18vh;
@@ -53,4 +109,47 @@
     .app-container nav h1 {
         margin: 0;
     }
+
+    .quote {
+        padding-top: 5.0rem;
+        opacity: 0.7;
+        letter-spacing: 2.0rem;
+        word-spacing: 2.0rem;
+        line-height: 1.2;
+        margin: 0 auto;
+    }
 }
+
+@media only screen and (max-width: 600px) {
+    .quote {
+        font-size: 5.0rem;
+        opacity: 0.8;
+        transform: rotate(0deg);
+        letter-spacing: 1.6rem;
+        word-spacing: 1.0rem;
+        line-height: 1.6;
+    }
+
+    .cut-time {
+        display: none;
+    }
+
+    .nav-link {
+        padding: 0rem 0rem;
+        margin: 0 1.8rem;
+        border: none;
+        border-radius: 0rem;
+        font-size: 2.4rem;
+    }
+    
+    .active {
+        border: .2rem whitesmoke solid;
+        color: whitesmoke;
+        box-shadow: .2rem .2rem .3rem whitesmoke;
+        text-shadow: .2rem .2rem .3rem #AA2320,
+        -.2rem -.2rem .3rem #AA2320,
+        .2rem -.2rem .3rem #AA2320,
+        -.2rem .2rem .3rem #AA2320;
+    }
+}
+/* Media Queries End */
