@@ -1,0 +1,56 @@
+.app-container {
+    box-sizing: border-box;
+}
+
+.app-container nav {
+    height: 12vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    border-bottom: 2px salmon solid;
+}
+
+.app-container nav h1 {
+    font-size: 65px;
+    color: lightslategrey;
+    text-shadow: 1px 1px 2px ghostwhite,
+                         -1px -1px 2px ghostwhite,
+                         1px -1px 2px ghostwhite,
+                         -1px 1px 2px ghostwhite;
+}
+
+.nav-link {
+    padding: 12px 28px;
+    margin: 0 12px;
+    border: 1px salmon solid;
+    border-radius: 12px;
+    text-decoration: none;
+    color:ghostwhite ;
+}
+
+.active {
+    border: 1px ghostwhite solid;
+    color:salmon;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 6px ghostwhite;
+}
+
+
+/* @media only screen and (max-width: 600px) {...} */
+
+@media only screen and (max-width: 1100px) {
+    .app-container nav {
+        height: 18vh;
+        justify-content:baseline;
+        flex-direction: column;
+        border-bottom: none;
+    }
+    
+    .app-container nav h1 {
+        margin: 0;
+    }
+}
