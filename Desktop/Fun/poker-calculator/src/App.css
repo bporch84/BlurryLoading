@@ -1,38 +1,52 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {
+  margin: 0 auto;
+}
+
+.app-container {
+  border: red 4px solid;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-container h1 {
+  border: green 4px solid;
+  font-family: 'Righteous', cursive;
+  font-size: 75px;
+  margin-bottom: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-container form {
+  border: 3px solid black;
+  background-color: dodgerblue;
+  border-radius: 20%;
+  width: 50%;
+  height: 50vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container .label-input {
+  border: 4px red solid;
+  text-align: left;
+}
+
+.app-container .win-percent {
+  border: 3px teal solid;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.app-container .money-won {
+  border: 3px teal solid;
+  display: flex;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-container .money-lost {
+  border: 3px teal solid;
+  display: flex;
+  justify-content: space-around;
+}
+
+.app-container button {
+  border: 3px pink solid;
 }

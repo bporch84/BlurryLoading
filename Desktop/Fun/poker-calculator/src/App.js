@@ -1,60 +1,46 @@
-import { useState } from "react";
+import { useForm } from "./hooks/useForm"
 
-const initialState = {
-  winPercent: "",
-  moneyWon: "",
-  moneyLost: "",
-  ev: null
-}
+import './App.css';
 
 function App() {
-  const [values, setValues] = useState(initialState);
-
-  const evFormula = () => {
-    const ev =(((values.winPercent * .01) * values.moneyWon) - (((100 - values.winPercent) * .01) * values.moneyLost));
-    return ev.toFixed(2);
-  };
-
-  const handleChange = e => {
-    setValues({
-      ...values,
-      [e.target.name]: e.target.value
-    })
-  };
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    setValues({
-      ...values,
-      ev: evFormula()
-    })
-  };
+  const [ values, handleChange, handleSubmit ] = useForm()
 
   return (
-    <div>
+    <div className="app-container">
       <h1>EV Poker Calculator</h1>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="winPercent"
-          value={values.winPercent}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="moneyWon"
-          value={values.moneyWon}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="moneyLost"
-          value={values.moneyLost}
-          onChange={handleChange}
-        />
+        <div className="form-input">
+          <div className="win-percent">
+            <label>Win Percentage: </label>
+            <input
+              type="text"
+              name="winPercent"
+              value={values.winPercent}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="money-won">
+            <label>Money Won: </label>
+            <input
+              type="text"
+              name="moneyWon"
+              value={values.moneyWon}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="money-lost">
+            <label>Money Lost: </label>
+            <input
+              type="text"
+              name="moneyLost"
+              value={values.moneyLost}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
         <button>Submit</button>
+        <h2>EV: {values.ev}</h2>
       </form>
-      EV: {values.ev}
     </div>
   );
 }
