@@ -24,6 +24,7 @@ const Main = () => {
              .then(res => setTime(res.data.currentDateTime))
              .catch(err => console.log(err))
     },[])
+    
     return(
         <div className="main-container">
             <div className="quote">

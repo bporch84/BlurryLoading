@@ -40,13 +40,13 @@ function App() {
           >
             Contacts
           </NavLink>
-          {/* <NavLink
+          <NavLink
             exact to="/"
             activeClassName="active"
             className="nav-link"
           >
             Home
-          </NavLink> */}
+          </NavLink>
         </div>
       </nav>
       <Switch>
