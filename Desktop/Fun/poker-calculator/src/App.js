@@ -9,7 +9,7 @@ function App() {
     <div className="app-container">
       <h1>EV Poker Calculator</h1>
       <form onSubmit={handleSubmit}>
-        <div className="form-input">
+        <div className="label-input">
           <div className="win-percent">
             <label>Win Percentage: </label>
             <input
