@@ -2,7 +2,20 @@ import { useForm } from "../hooks/useForm"
 
 const EVCalc = () => {
     
-  const [ values, handleChange, handleSubmit ] = useForm()
+  const [ values, setValues, handleChange ] = useForm()
+  
+  const evFormula = () => {
+    const ev =(((values.winPercent * .01) * values.moneyWon) - (((100 - values.winPercent) * .01) * values.moneyLost));
+    return ev.toFixed(2);
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    setValues({
+      ...values,
+      ev: evFormula()
+    });
+  };
 
   return (
     <div className="ev-calc-container">
