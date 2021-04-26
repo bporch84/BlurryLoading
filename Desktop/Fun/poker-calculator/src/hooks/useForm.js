@@ -10,7 +10,11 @@ export const useForm = () => {
         pot: "",
         bet: "",
         call: "",
-        odds: null
+        odds: null,
+        equityIO: "",
+        potIO: "",
+        callIO: "",
+        impliedOdds: null
       };
 
       const [values, setValues] = useState(initialState); 

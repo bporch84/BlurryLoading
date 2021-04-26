@@ -6,7 +6,7 @@ const PotOdds = () => {
 
     const finalOdds = () => {
         const finalPot = Number(values.call)/(Number(values.pot) + Number(values.bet) + Number(values.call))
-            return finalPot * 100;
+            return (finalPot * 100).toFixed(2);
     };
 
     const handleSubmit = e => {
